@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Quizz Football</title>
+<meta name="description" content="Questionnaire à choix multiples en Javascript pour passer des évaluations sur des Quizz" />
+<meta name="robots" content="index,follow" />
+<meta http-equiv="content-language" content="fr" />
+<link href='styles/style.css' rel='stylesheet' type='text/css' />
+<link rel="stylesheet" type="text/css" href="styles/navbar-style.css">
+<script language="Javascript" src="js/questions.js"></script>
+<style>
+	@media screen and (max-width: 740px)
+	{
+		
+		.calque_titre
+		{
+			width: 75%;
+			font-size: 30px;	
+		}
+		#scores,#rest{
+			display: block;
+		}
+		
+		.calque_rep
+		{
+			width: 90%;
+			min-height: 60px;
+			margin: auto;
+			padding-top: 30px;
+			display: block;
+			font-size:15px;
+			margin-bottom:20px;
+		}
+		input[type="button"]
+		{
+			width: 50%;
+			padding-left:10px;
+			margin: 10px 25% 10px 25%;
+		}
+		
+	}
+	@media screen and (max-width: 930px)
+	{
+		.calque_titre
+		{
+			width: 75%;
+			font-size: 20px;	
+		}
+		input[type="button"]
+		{
+			width: 50%;
+			padding-left:10px;
+			margin: 10px 25% 10px 25%;
+		}	
+	}
+</style>
+</head>
+<body>
+	
+        <<nav class="navbar">
+		<label href="#" class="logo">FootApp</label>
+		<div class="nav-links ">
+		<ul>
+			<li><a  href="index.html">Page d'accueil</a></li>
+			<li><a href="reglement-foot.html">Règlement</a></li>
+			<li><a class="active" href="#quizz">Quizz</a></li>
+			<li><a href="classement.html">Classement</a></li>
+		</ul>
+		</div>
+		<img src="images/menu-btn.PNG" alt="menu" class="menu-bars">		
+		</nav>
+    <header id="headerPage"></header>
+  
+	<div class="div_conteneur_parent">
+		
+		<div class="div_conteneur_page">		
+			<div class="titre_page"><h1>Quizz Football</h1></div>			
+            <div class="calque_titre">
+                <h1>Cliquez sur la bonne réponse</h1>
+            </div>                                                                                            
+            <div class="titre_centre" id="question">
+
+            </div>	         
+            <div class="colonne" id="liste">
+                <div class="calque_rep" id="rep1" onclick="valider(1)"></div>
+                <div class="calque_rep" id="rep2" onclick="valider(2)"></div>
+                <div class="calque_rep" id="rep3" onclick="valider(3)"></div>
+                <div class="calque_rep" id="rep4" onclick="valider(4)"></div>
+            </div>                                           
+            <div id="apercu">
+				<div id="stats">
+					<div id="scores">
+						<div style="float:left;">Score :&nbsp;</div>
+						<div id="score">0</div>
+					</div>
+					<div id="rest">
+						<div style="float:left;">Questions restantes:&nbsp;</div>
+						<div id="restant">10</div>
+					</div>
+                </div>
+                <input type="button" value="recommencer" onClick="debuter();"/>
+            </div>						                                                                 			
+		</div>	
+	</div>
+	
+</body>
+<script>
+        const menuHamburger = document.querySelector(".menu-bars")
+        const navLinks = document.querySelector(".nav-links")
+ 
+        menuHamburger.addEventListener('click',()=>{
+        navLinks.classList.toggle('mobile-menu')
+        })
+</script> 
+<script type="text/javascript" language="javascript">
+
+	var bonne_rep = 0; 
+	var nb_questions = 10;
+	var nb_erreurs = 0;
+	var nb_correct = 0;
+	var mem_nb_alea="";
+	var jouer=false;
+	
+	function debuter()//pour commencer une nouvelle partie 
+	{
+		jouer = true;
+		bonne_rep = 0;
+		nb_questions = 10;
+		nb_erreurs = 0;
+		nb_correct = 0;
+		mem_nb_alea="";
+		init();
+		suivant();
+	}
+	
+	function init()
+	{
+		document.getElementById('restant').innerText = nb_questions;
+		document.getElementById('score').innerText = 0+nb_correct;	
+	}
+	function valider(num_rep)
+	{
+		if(jouer==false)//pour s'assurer que la partie est bien en cour càd qu'on a pas attiendre la 10ème qstn 
+			return;//mettre fin à l'execution
+		if(num_rep != bonne_rep)//l'utilisateur n'a pas repondu correctement
+			nb_erreurs++;
+		else nb_correct++;	
+		nb_questions--;
+		if(nb_questions==0)//on est arriver à la derniere qstn
+			jouer=false;
+		init();
+		suivant();
+	}
+	function suivant()
+	{
+		var indice;//pour passer l'ensemble des calques pour charger les 4 propositions
+		var test = true; 
+		var nb_alea = 0;
+		if(jouer==false)//pour s'assurer que la partie est bien en cour
+			return;//mettre fin à l'execution
+		
+		while(test==true)//pour verifier qu'on a un nb_alea qui n'a pas été proposé
+		{
+			nb_alea = Math.floor(Math.random()*40) + 1;//floor pour convertir un float à un entier
+			//40 car nous avons 40 qst donc pour avoir un interval entre 1 et 40 mais là on va avoir 39 donc on rajoute 1
+			if(mem_nb_alea.indexOf("-" + nb_alea + "-")>-1) //consiste à verifier si le nb_alea a été trouvé
+				nb_alea = Math.floor(Math.random()*40) + 1;
+			else
+			{
+				test = false;
+				mem_nb_alea += "-" + nb_alea + "-";
+			}
+
+		}
+		var chaine_question = questions(nb_alea);//pour récuperer la question du script questions
+		var tab_question = chaine_question.split('*');//c'est un tableau qui contient dans chaque case la question et ses propositions
+		document.getElementById('question').innerText = tab_question[0];//mettre la question qui se trouve à l'indice 0 dans la div réservé pour les questions
+		for(indice=1;indice<=4;indice++)//mettre chaque reponse dans la div réservé pour les reponses
+		{
+			document.getElementById('rep' + indice).innerText = indice + ") " + tab_question[indice];
+		}
+		bonne_rep = tab_question[5];//recuperer la bonne réponse de la qstn
+	}	
+	debuter();
+</script>
+</html>
+	

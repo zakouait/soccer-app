@@ -1,0 +1,71 @@
+body{	
+	font-family:Calibri;
+}
+
+h1{
+    text-align: center; font-size: 70px;
+    color: black;
+}
+h2{
+    text-align: center; 
+	text-decoration: underline;
+    font-size: 25px;
+}
+strong{
+    font-weight: bolder;
+}
+a{
+    color: aqua;
+    font-weight: bold;
+    font-size: 20px;
+}
+figure{text-align: center;}
+main{
+    float: left;
+    width:75% ;
+    background-color:rgb(233, 255, 204);
+	background:rgba(233, 255, 204,0.3);
+}
+aside{
+    float:right;
+    width:24% ;
+    height: 50%;
+    border-radius: 5px; 
+	background-color:rgb(233, 255, 204);
+	background:rgba(233, 255, 204,0.5);
+}
+footer span{
+    background-color: black;
+    color:white;
+    margin :30px;width:100%;
+}
+ol li{
+    display:block;
+	border:none;
+}
+section{
+    color: black;
+    background-color:rgb(233, 255, 204);
+	background:rgba(233, 255, 204,0.3);
+    font-size: 15px;
+    font-weight: bold;
+}
+p{
+    line-height: 1.5;
+    padding :3px;
+    text-align:justify;
+    
+}
+@media only screen and (max-width: 1270px) {
+    aside{
+        float:left;
+        width:22%;
+        font-size: 10px;
+    }
+        
+}
+@media only screen and (max-width: 900px) {
+ main{float: left;width:100%}
+ aside{float:left; width:100%}
+	 
+}

@@ -1,0 +1,138 @@
+
+<journée>
+
+
+<match>
+<equipe1>Brentford</equipe1>
+<but1>3</but1>
+<but2>1</but2>
+<equipe2>Liverpool</equipe2>
+<status>terminé</status>
+<arbitre>STUART ATTWELL</arbitre>
+<temps>terminé</temps>
+<date>02/01/2023 a 21h00</date>
+<logo1>brentford-236.jpg</logo1>
+<logo2>liverpool-8.jpg</logo2>
+
+</match>
+
+
+<match>
+<equipe1>Arsenal</equipe1>
+<but1>0</but1>
+<but2>0</but2>
+<equipe2>New castle</equipe2>
+<status>terminée</status>
+<arbitre>ANDY MADLEY</arbitre>
+<temps>terminé</temps>
+<date>3/01/2023</date>
+<logo1>arsenal-19.jpg</logo1>
+<logo2>newcastle-united-20.jpg</logo2>
+
+</match>
+
+
+<match>
+<equipe1>Everton</equipe1>
+<but1>1</but1>
+<but2>4</but2>
+<equipe2>Brighton</equipe2>
+<status>terminé</status>
+<arbitre>ANDRE MARRINER</arbitre>
+<temps>finis</temps>
+<date>03/01/2023 20h45</date>
+<logo1>everton-13.jpg</logo1>
+<logo2>brighton-and-hove-albion-78.jpg</logo2>
+
+</match>
+
+
+<match>
+<equipe1>Leicester</equipe1>
+<but1>0</but1>
+<but2>1</but2>
+<equipe2>Fulham</equipe2>
+<status>terminé</status>
+<arbitre>DARREN BOND</arbitre>
+<temps>finis</temps>
+<date>03/01/2023 21h00</date>
+<logo1>leicester-city-42.jpg</logo1>
+<logo2>fulham-11.jpg</logo2>
+
+</match>
+
+
+<match>
+<equipe1>Manchester United</equipe1>
+<but1>3</but1>
+<but2>0</but2>
+<equipe2>Bournemouth</equipe2>
+<status>terminée</status>
+<arbitre>MICHAEL SALISBURY</arbitre>
+<temps>finis</temps>
+<date>03/01/2023 20h45</date>
+<logo1>manchester-united-14.jpg</logo1>
+<logo2>afc-bournemouth-52.jpg</logo2>
+
+</match>
+
+
+<match>
+<equipe1>Southampton</equipe1>
+<but1>0</but1>
+<but2>1</but2>
+<equipe2>Nothingham Forest</equipe2>
+<status>terminé</status>
+<arbitre>THOMAS BRAMALL</arbitre>
+<temps>finis</temps>
+<date>04/01/2023 20h30</date>
+<logo1>southampton-65.jpg</logo1>
+<logo2>nottingham-forest-63.jpg</logo2>
+
+</match>
+
+
+
+<match>
+<equipe1>Leeds United</equipe1>
+<but1>2</but1>
+<but2>2</but2>
+<equipe2>West Ham United</equipe2>
+<status>terminé</status>
+<arbitre>DAVID COOTE</arbitre>
+<temps>finis</temps>
+<date>04/01/2023 21h00</date>
+<logo1>leeds-united-71.jpg</logo1>
+<logo2>west-ham-united-1.jpg</logo2>
+
+</match>
+
+
+
+<match>
+<equipe1>Aston Villa</equipe1>
+<but1>1</but1>
+<but2>1</but2>
+<equipe2>Wolves</equipe2>
+<status>terminé</status>
+<arbitre>JARRED GILLETT</arbitre>
+<temps>terminé</temps>
+<date>04/01/2023 21h</date>
+<logo1>aston-villa-15.jpg</logo1>
+<logo2>wolverhampton-wanderers-29.jpg</logo2>
+
+</match>
+<match>
+<equipe1>Manchester city</equipe1>
+<but1>1</but1>
+<but2>0</but2>
+<equipe2>chelsea </equipe2>
+<status>terminé</status>
+<arbitre>JARRED GILLETT</arbitre>
+<temps>terminé</temps>
+<date>05/01/2023 20h45</date>
+<logo1>manchester-city-9.jpg</logo1>
+<logo2>chelsea-18.jpg</logo2>
+
+</match>
+</journée>

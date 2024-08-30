@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soccer Live Score</title>
+    <link rel="stylesheet" href="styles/navbar-style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    
+  </head>
+
+  <body>
+  <header> <nav class="navbar">
+    <label href="#" class="logo">FootApp</label>
+    <div class="nav-links ">
+    <ul>
+      <li><a class="active" href="pageacceuile.html.html">Page d'accueil</a></li>
+      <li><a href="reglement-foot.html">R&egrave;glement</a></li>
+      <li><a href="quizz.html">Quizz</a></li>
+      <li><a  href="classement.html">Classement</a></li>
+    </ul>
+    </div>
+    <img src="images/menu-btn.PNG" alt="menu" class="menu-bars">    
+    </nav>
+</header>
+    <div class="container" style="background-color:rgb(233, 255, 204);
+    background:rgba(233, 255, 204,0.5);width:500px;margin:auto;">
+      <h1>Score Board</h1>
+
+      <div class="title-box-1">
+        <p>Local Team</p>
+        <p>Visitor Team</p>
+      </div>
+
+      <div id="demo"></div>
+
+      <script>
+        function loadXMLDoc() {
+          var xmlhttp = new XMLHttpRequest();
+          xmlhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+              myFunction(this);
+            }
+          };
+          xmlhttp.open("GET", "MatchDayScore.xml", true);
+          xmlhttp.send();
+        }
+        function myFunction(xml) {
+          var i;
+          var xmlDoc = xml.responseXML;
+
+          /*var table =
+            '<div class="title-box"> <p>Local Team</p> <p>Visitor Team</p></div>';*/
+
+          var table = '<div class="title-box-2">';
+
+          var x = xmlDoc.getElementsByTagName("match");
+
+          for (i = 0; i < x.length; i++) {
+            table += '<div class="matches-table">';
+            table +=
+              '<div class="team"> <img  id="homeLogo" src="images/' +
+              x[i].getElementsByTagName("logo1")[0].childNodes[0].nodeValue +
+              '" > <p id="homeName">' +
+              x[i].getElementsByTagName("equipe1")[0].childNodes[0].nodeValue +
+              '</p> </div><p id="goals">' +
+              x[i].getElementsByTagName("but1")[0].childNodes[0].nodeValue +
+              " - " +
+              x[i].getElementsByTagName("but2")[0].childNodes[0].nodeValue +
+              '</p> <div class="team"> <img src="images/' +
+              x[i].getElementsByTagName("logo2")[0].childNodes[0].nodeValue +
+              '" > <p id="awayName">';
+            table +=
+              x[i].getElementsByTagName("equipe2")[0].childNodes[0].nodeValue;
+            table += "</p>       </div> </div>";
+          }
+          document.getElementById("demo").innerHTML = table;
+        }
+        loadXMLDoc();
+      </script>
+	  	<script>
+        const menuHamburger = document.querySelector(".menu-bars")
+        const navLinks = document.querySelector(".nav-links")
+ 
+        menuHamburger.addEventListener('click',()=>{
+        navLinks.classList.toggle('mobile-menu')
+        })
+   </script> 
+    </div>
+  </body>
+</html>

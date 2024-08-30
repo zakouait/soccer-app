@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles/navbar-style.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">  
+    <style>
+      img {
+        display :block;
+        width: 13.63px;
+        margin-left:auto;
+        margin-right:auto;
+      }
+      
+      .pyt{
+        float:left;
+        border-style:solid ;
+        border-collapse: collapse;
+        margin-left: 10%;
+        margin-right: 0px;
+        margin:center;
+        border:2px solid;
+        padding: 30px;
+        width: 80px;
+      }
+      .jav{
+        border-style:solid ;
+        border-collapse: collapse;
+        margin-left: 0px;
+        margin:center;
+        border:2px solid;
+        padding: 30px;
+        width: 75%;
+        margin-right: 5%;
+      }
+      table{
+        height: 900px;
+        margin-bottom: 20px;
+      }
+      table,th,td { 
+        background-color:rgb(233, 255, 204);
+	      background:rgba(233, 255, 204,0.3);
+        border-style:solid ;
+        border-color:black;
+        border-collapse: collapse;
+        margin: center;
+        border:2px solid ;       
+      }
+      th,td {
+        text-shadow:coral;
+        color:white;
+        border-style:solid;
+        padding: 10px 30px;
+        text-align :center;
+        border-color:black;
+        border:2px ;
+        
+      }
+      tr:hover {background-color:coral;} 
+      th {
+        background-color: #800080;
+        color: white;
+      }
+      @media screen and (max-width: 1100px){
+        .designation{
+          font-size: 10px;
+        }
+      }
+      @media screen and (max-width: 1000px) and (min-width: 900px){
+        #tab1{
+          width: 5%;
+          margin-left: 5%;
+          font-size: 10px;
+        }
+        th,td{
+          padding: 10px 30px;
+        }
+        .designation{
+          font-size: 8px;
+        }
+        #demo{
+          font-size: 10px;
+          width: 85%;
+        }
+        th{
+          height: 20px;
+        }
+      }  
+      @media screen and (max-width: 900px){
+        #tab1{
+          width: 3%;
+          margin-left: 2%;
+          font-size: 10px;
+        }
+        th,td{
+          padding: 10px 30px;
+        }
+        .designation{
+          font-size: 8px;
+        }
+        #demo{
+          font-size: 10px;
+          width: 85%;
+        }
+        th{
+          height: 20px;
+        }
+      }        
+      @media screen and (max-width: 800px){ 
+        #tab1{
+          width: 3%;
+          margin-left:15px;
+          font-size: 10px;
+        }
+        .jav{
+          width: 85%;
+         
+        }
+        th,td {
+        padding: 5px 15px;  
+        }
+        th{
+          height: 20px;
+        }
+        .designation{
+          font-size: 7px;
+          font-weight: bold;
+        }
+      }
+    </style>
+  </head>
+<body onload="loadDoc()" id='body' >
+  <nav class="navbar">
+    <label href="#" class="logo">FootApp</label>
+    <div class="nav-links ">
+      <ul>
+        <li><a href="index.html">Page d'accueil</a></li>
+        <li><a href="reglement-foot.html">R&egrave;glement</a></li>
+        <li><a href="quizz.html">Quizz</a></li>
+        <li><a class="active" href="#classement">Classement</a></li>
+      </ul>
+    </div>
+    <img src="images/menu-btn.PNG" alt="menu" class="menu-bars">    
+  </nav>
+  <header></header>
+  <h2></h2>				  
+  <br><br>
+ 
+  <table id="tab1" class="pyt"> 
+    <tr><th> logo</th></tr>
+    <tr><td> <img src="images/arsenal-19.jpg" id="arsenal" > </td></tr>
+    <tr><td><img src="images/manchester-city-9.jpg" id="city" ></td></tr> 
+    <tr><td><img src="images/newcastle-united-20.jpg" id="tottenham" ></td></tr>
+    <tr><td><img src="images/manchester-united-14.jpg" id="cir" ></td></tr>
+    <tr><td><img src="images/tottenham-hotspur-6.jpg" id="circl" ></td></tr>
+    <tr><td><img src="images/liverpool-8.jpg" id="circlee" ></td></tr>
+    <tr><td><img src="images/fulham-11.jpg" id="circleee" ></td></tr>
+    <tr><td><img src="images/brighton-and-hove-albion-78.jpg" id="circleeee" ></td></tr>
+    <tr><td><img src="images/brentford-236.jpg" id="circleeeeee" ></td></tr>
+    <tr><td><img src="images/chelsea-18.jpg" id="circleeeeeee" ></td></tr>
+    <tr><td><img src="images/aston-villa-15.jpg" id="circleeeeeeee" ></td></tr>
+    <tr><td><img src="images/crystal-palace-51.jpg" id="circleeeeeeeee" ></td></tr>
+    <tr><td><img src="images/leicester-city-42.jpg" id="circleeeeeeeeee" ></td></tr>
+    <tr><td><img src="images/leeds-united-71.jpg" id="circleeeeeeeeee" ></td></tr>
+    <tr><td><img src="images/nottingham-forest-63.jpg" id="circle" ></td></tr>
+    <tr><td><img src="images/afc-bournemouth-52.jpg" id="circle" ></td></tr>
+    <tr><td><img src="images/west-ham-united-1.jpg" id="circle" ></td></tr>
+    <tr><td><img src="images/everton-13.jpg" id="circle" ></td></tr>
+    <tr><td><img src="images/wolverhampton-wanderers-29.jpg" id="circle" ></td></tr>
+    <tr><td><img src="images/southampton-65.jpg" id="circle" ></td></tr>
+  </table> 
+  <table class="jav" id="demo" >   </table> 
+
+  <script>
+    function loadDoc() {
+     var xhttp = new XMLHttpRequest();
+     xhttp.onreadystatechange = function() {
+     if (this.readyState == 4 && this.status == 200) {
+     myFunction(this);
+       }
+       };
+       xhttp.open("GET", "fich.xml", true);
+       xhttp.send();
+       }
+       function myFunction(xml) {
+       var i;
+       var image =document.getElementById('circle');
+     
+       var xmlDoc = xml.responseXML;
+       var table="<tr><th> Clubs </th><th>MJ</th><th>G</th><th>N</th><th>P</th><th>BP</th><th>BC</th><th>DB</th><th>Pts</th></tr>";
+       var x = xmlDoc.getElementsByTagName("ARTICLE");
+       for (i = 0; i <x.length; i++) {  
+         table += '<tr><td class="designation">   ' +  
+         x[i].getElementsByTagName("designation")[0].childNodes[0].nodeValue   + 
+         " </td><td>" +
+         x[i].getElementsByTagName("quantite")[0].childNodes[0].nodeValue +
+         "</td><td>" +
+         x[i].getElementsByTagName("prix")[0].childNodes[0].nodeValue +
+         "</td><td>" +
+         x[i].getElementsByTagName("N")[0].childNodes[0].nodeValue+
+       "</td><td>" +
+         x[i].getElementsByTagName("P")[0].childNodes[0].nodeValue+
+       "</td><td>" +
+         x[i].getElementsByTagName("BP")[0].childNodes[0].nodeValue+
+         "</td><td>" +
+       x[i].getElementsByTagName("BC")[0].childNodes[0].nodeValue+
+       "</td><td>" +
+         x[i].getElementsByTagName("DB")[0].childNodes[0].nodeValue+
+         "</td><td>" +
+         x[i].getElementsByTagName("l")[0].childNodes[0].nodeValue+
+         
+         "</td></tr>";
+       }
+       image.src="images/wolverhampton-wanderers-29.jpg";
+       document.getElementById("demo").innerHTML = table ;
+     }
+   </script>
+</body>
+</html>

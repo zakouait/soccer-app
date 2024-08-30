@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html >
+	<head>
+		<meta charset="UTF-8">
+		<title>Football Central</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+		<link rel="stylesheet" type="text/css" href="styles/navbar-style.css">
+		<link rel="stylesheet" type="text/css" href="styles/style1.css">
+		
+	</head>
+	<body>
+		<header>    
+			<nav class="navbar">
+				<label href="#" class="logo">FootApp</label>
+				<div class="nav-links ">
+				<ul>
+					<li><a href="index.html">Page d'accueil</a></li>
+					<li><a class="active" href="reglement-foot.html">Réglement</a></li>
+					<li><a href="quizz.html">Quizz</a></li>
+					<li><a href="classement.html">Classement</a></li>
+				</ul>
+				</div>
+				<img src="images/menu-btn.PNG" alt="menu" class="menu-bars">		
+			</nav>
+		</header>
+		<script>
+			const menuHamburger = document.querySelector(".menu-bars")
+			const navLinks = document.querySelector(".nav-links")
+	
+			menuHamburger.addEventListener('click',()=>{
+			navLinks.classList.toggle('mobile-menu')
+			})
+		</script>   
+		<main class="main1">
+			<div id="principal ">
+				<section id="def">
+				<h2> Definition du football	</h2>
+				
+				<p>
+				Le football (/futbol/), ou dans le langage courant simplement foot, par apocope, ou soccer (/sɔkœʁ/, en français d'Amérique du Nord), est un sport collectif qui se joue avec un ballon sphérique entre deux équipes de onze joueurs. Elles s'opposent sur un terrain rectangulaire équipé d'un but à chaque extrémité. L'objectif de chaque camp est de mettre le ballon dans le but adverse plus de fois que l'autre équipe, sans que les joueurs utilisent leurs bras à l'exception des gardiens de buts.
+
+				Nommé à l'origine football association et codifié au Royaume-Uni à la fin du xixe siècle, le football s'est doté en 1904 d'une fédération internationale, la FIFA. Pratiqué en 2006 par environ 264 millions de joueurs à travers le monde, le football est le sport le plus populaire dans la majorité des pays. Certains continents, comme l'Afrique, l'Amérique du Sud et l'Europe, sont même presque entièrement dominés par cette discipline.
+
+				Le calendrier est gouverné par deux types d'épreuves : celles concernant les clubs et celles des équipes nationales. La Coupe du monde est l'épreuve internationale la plus prestigieuse. Elle a lieu tous les quatre ans depuis 1930 (sauf entre 1938 et 1950). Pour les clubs, championnats nationaux et autres coupes sont au programme des compétitions.
+
+				En compétition de clubs, la Ligue des champions de l'UEFA, disputée en Europe mais qui possède des équivalents sur les autres continents, est le trophée le plus convoité de ce sport, malgré la mise en place récente d'une Coupe du monde des clubs, encore à la recherche de prestige.
+				</p>
+				</section>
+			
+				<section id="regles">
+					<h2>les régles	</h2>
+					<p>
+					Deux équipes de 11 joueurs dont un gardien de but (plus trois remplaçants) s'affrontent autour d'un ballon rond le plus souvent en cuir. Les matchs ne peuvent se disputer à moins de 7 joueurs par équipe (gardien compris).
+					Les joueurs ne peuvent toucher le ballon ni avec les mains ni avec les bras.<br>
+					Les footballeurs portent sur leur maillot le numéro qui correspond à leur rôle sur le terrain il y'a unarbitre central dirige le match. Il est assisté par deux ou trois juges de touche ou arbitres assistants qui signalent avec un drapeau les hors-jeu et hors lignes. Un autre arbitre peut assister également l'arbitre central par arbitrage vidéo dans le cadre des matchs importants.<br>
+					Selon la nature de la faute commise par un joueur ou le lieu de sortie du terrain de la balle, l'arbitre peut siffler des fautes.<br>
+					</p>
+				</section>
+
+				<section id="lesfeutes">
+					<h2>les fautes</h2>
+					<ol >
+						<li>une rentrée de touche</li>
+						<li>un coup de pied de coin ou corner</li>
+						<li>un coup franc indirect</li>
+						<li>un coup franc direct, qui doit partir de l'endroit où la faute a été commise par l'adversaire</li>
+						<li>un coup de pied de réparation ou penalty</li>	
+					</ol>
+				</section>
+
+				<section id="lessanctions">
+					<h2>Les sanction</h2>	
+					<p>
+					Les fautes graves sont sanctionnées par l’arbitre central qui utilise deux sortes de cartons :<br>
+					le carton jaune : avertissement pour le joueur.<br>
+					le carton rouge : expulsion définitive du joueur. Il peut être donné à la suite d'un carton jaune ou directement si la faute est trop grave.<br>
+					2 carton jaune résulte en 1 carton rouge et donc l'expultion du joueur.
+					</p>
+				</section>
+
+				<section id="lesrégulation">
+					<h2>Autre regulation</h2>
+					<p >
+					les autre régle est regulation peuvent étre résumer en :
+					</p>
+					<ol>
+						<li><strong>- Les dimension :</strong>Le terrain de jeu doit être rectangulaire. La  lignes de touche doit dans tous les cas être plus grande que la lignes de but.Longueur : minimum 90 m, maximum 120 m. Largeu minimum 45 m, maximum 90 m.</li>
+						<li><strong>- Marquage du terrain : </strong> la ligne mediane,la surface (16.5m) ,ligne de touche ,ligne de but, rond central,les 6 métre de la cage</li>
+						<li><strong>- Les drapeaux : </strong>A chaque coin du terrain doit être planté un drapeau avec une hampe - non pointue - s’élevant au moins à 1,50 m du sol</li>
+						<li><strong>- Le balon :</strong>il doit étre sphérique pesont entre 410et 450g entre 70-68cm de matiere adéquate et pression ntre 0,6 et 1,1 atmosphère</li>
+						<li><strong>- Remplacement de joueur :</strong>il est possible d'effectuer 3 changement par match officiel par equipe (5 dans quelque competition poste covid) </li>
+						<li><strong>- Gardiens de but :</strong>Le gardien de but doit porter une tenue aux couleurs le distinguant des autres joueurs, de l’arbitre et des arbitres assistants.</li>
+						<li><strong>- Temps du match :</strong> 2 mi temps de 45min +temps additionel</li>
+						<li><strong>- La mi-temps :</strong>un arret de jeu de 15min entre les 2 45min</li>
+						<li><strong>- Temps additionel:</strong>aprés chaque mi temps en ajoute le temps perdue</li>
+						<li><strong>- Les prolongation</strong>en cas de match nul en coupe en ajoute 2 mitemps de 15min avec 1min de repos si le nul perdure en rajoute une seance de tirs au but</li>
+						<li><strong>- Arrêt définitif du match:</strong>Un match arrêté définitivement avant son terme doit être rejoué, sauf disposition contraire stipulée dans le règlement de la compétition.</li>
+						<li><strong>- Ballon hors du jeu</strong>Le ballon est hors du jeu quand :<br>
+							il a entièrement franchi la ligne de but ou la ligne de touche, que ce soit à terre ou en l’air<br>
+							le jeu a été arrêté par l’arbitre.
+						</li>
+						<li><strong>- Le but marqué:</strong>Un but est marqué quand le ballon a entièrement franchi la ligne de but,</li>
+						<li><strong>- Equipe victorieure:</strong>L’équipe qui aura marqué le plus grand nombre de buts pendant le match remporte la victoire. Quand les deux équipes marquent le même nombre de buts ou ne marquent aucun but, le match est déclaré nul.</li>
+						<li><strong>- Règlements des compétitions:</strong>Pour les matches se terminant sur un score nul, les règlements des compétitions peuvent prévoir des dispositions relatives aux prolongations ou à d’autres procédures agréées par l’International F.A. Board permettant de déterminer le vainqueur du match.</li>
+					</ol>
+				</section>	
+			</div>
+		</main>
+		<aside>
+			<h2>Sommaire</h2>
+			<ol>
+				<li ><a href="#def">Defintion du football</a></li>
+				<li ><a href="#regles">les régles</a></li><ol>
+				<li ><a href="#lesfeutes">les fautes</a></li>
+				<li ><a href="#lessanctions">les sanctions</a></li>
+				<li ><a href="#lesrégulation"></li> les régulation</a></ol>
+			</ol>
+		</aside>
+	</body>
+</html>
